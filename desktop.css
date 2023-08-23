@@ -1,0 +1,209 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Wenn auf dem Bildschirm genug Platz vorhanden ist
+ * (in der Regel auf einem Laptop, PC, Mac), dann
+ * können wir die Elemente großflächig organisieren.
+ * Solche Einstellungen kommen dann in diese Datei.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ @media screen and (min-width: 800px) {
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Schriftgröße für den gesamten Inhalt
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+  
+     /*-------------------------------------------------------------
+*----------------- Style für den Körper:hier geben wir der Körper eine Hintergrundbild--------------------------------------
+*-------------------Das Bild bewegt sich nicht beim Scrollen ,füllt den gesamten  Sichtfeld----------------------------------
+* --------------------------------und es mittig ist--------------------------------------------------------------------------
+*-----------------------und mit Grid hat zwei Splaten----------------------------------------------------------*/
+body{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-image: url(bilder/hin.jpg); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+}
+     /* * * * * * * * * * * * * * * * * * * * * * * * * * ***********
+    * Header soll in zeile1 und Spalte1 sein und auf zwei Spalten breit strecken
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    header{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-column-end:span 2 ;
+    }
+        /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * erste Teile von Header hat ganzeZeile und darin klasse Zeile1 und klasse zeile2********
+    * * * * * * *und mit flex wenn es kein genug Plaz gibt ,rutchen in die nechste Zeile* * * * * * * * * * * */
+    header .header{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+  
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * nav soll in zeile2 und Spalte2 sein und mit flex wenn es kein genug Plaz gibt ,rutchen in die nechste Zeile
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+   nav{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: flex;
+    flex-wrap: wrap;
+   }
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * div  nav
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    nav div{
+      height: 300px;
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+    }
+    
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * klasse nav soll in zeile3 und Spalte2 sein und mit flex-wrap wenn es kein genug Plaz gibt ,rutchen in die nächste Zeile
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    .nav{
+        grid-column-start: 2;
+        grid-row-start: 3;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+       }
+              /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * div in Klasse nav
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    .nav div{
+      height: 300px;
+      display: flex;
+      flex-wrap: nowrap;
+     align-items: center;
+      margin-top: 30px;
+    }
+       /*-----------------------------------------------------------------------------------------------
+------------------------------Breit und Höhe des Bildes im Körper                     -------------*/
+    img{
+      width:170px;
+      height:170px;
+      margin-left:15px;
+        }
+  
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Hauptinhalt
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+  
+    main {
+        grid-column-start: 1;
+        grid-row-start:2;
+        grid-row-end:span 2 ;  
+      display: grid;
+      grid-template-columns: 33% 33% 33% ;
+      background-color: rgba(82, 144, 231, 0.699);
+    }
+  
+    /*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div1 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap--und Hindergroundfarbe-----------------------------------------*/
+main .div1{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: auto;
+    max-height: 240px;
+    text-align: justify;
+    background-color: rgba(143, 225, 79, 0.837);
+    padding: 5;
+    margin: 5;
+}
+
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-und  auf die dritte Spalte verschieben----------------------------------------*/
+main .div2{
+    grid-column-start: 3;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: auto;
+    max-height: 240px;
+    text-align: justify;
+    overflow: auto;
+    background-color: rgba(80, 125, 170, 0.837); 
+    color: rgb(188, 227, 47);
+    padding: 10px;
+    margin:10px;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div3 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-------------------------------------------*/
+main .div3{
+   /* Element auf die zwei Spalte  verschieben */
+    grid-column-start: 2;
+     /* Element auf die zweite Zeile verschieben */
+    grid-row-start: 2;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: auto;
+    max-height: 240px;
+    text-align: justify;
+    background-color: rgba(158, 62, 71, 0.837);
+    color: rgb(20, 218, 27);
+    padding: 10px;
+    margin: 5px;
+    overflow: auto;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div4 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-------------------------------------------*/
+main .div4{
+   /* Element auf die erste Spalte verschieben */
+    grid-column-start: 1;
+     /* Element auf die dritte Zeile verschieben */
+    grid-row-start: 3;
+    display: flex;
+  justify-content:space-between;
+  align-items: center;
+  overflow: auto;
+  max-height: 240px;
+    background-color: rgba(37, 155, 98, 0.837);
+    color: brown;
+    padding: 10px;
+    margin: 5px;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div5 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-------------------------------------------*/
+main .div5{
+   /* Element auf die dritte verschieben */
+    grid-column-start: 3;
+     /* Element auf die dritte Zeile verschieben */
+    grid-row-start: 3;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: auto;
+    max-height: 240px;
+    background-color: rgba(37, 155, 98, 0.837);
+    color: brown;
+    padding: 10px;
+    margin: 5px;
+}
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Fußzeile
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    footer  {
+       /* Element auf die erste Spalte verschieben */
+        grid-column-start: 1;
+         /* Element auf die vierte Zeile verschieben */
+        grid-row-start: 4;
+        /* Element auf zwei Spalten strecken */
+        grid-column-end:span 2 ;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  }

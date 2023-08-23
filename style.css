@@ -1,0 +1,187 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Allgemeine Einstellungen wie zum Beispiel Farben
+ * oder Effekte können in dieser Datei untergebracht
+ * werden.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+* {
+    box-sizing: border-box;
+  }
+
+  /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Menü
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ 
+    header  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgba(87, 182, 108, 0.623);
+        box-shadow: 0px 0px 6px darkblue;
+        border-radius: 15px;
+        padding: 5px;
+        height: auto;
+        }
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Menü-Liste
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+header .zeile2 ol{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  list-style: none;
+} 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Menü-Einträge
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ /*-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------*/
+header .zeile1{
+  height: 50px;
+  margin: 20px;
+}  
+/*-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------*/
+header .zeile3{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 20px;
+  background-color: rgba(157, 156, 230, 0.623);
+}  
+/*-----------------------------------------------------------------------------------------------
+--------------------------Style für A Element im Menü---------------------------------------*/
+header  div a{
+   margin: 10px;
+   padding: 10px;
+  cursor: pointer;
+  background-color: rgba(219, 225, 41, 0.7);
+  border-radius: 25px;
+  border-spacing: 10px;
+  box-shadow: 0px 0px 20px rgba(36, 1, 31, 0.7);
+ font-size: 30px;
+ text-decoration: none;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ text-shadow:0px 0px 20px rgba(74, 5, 64, 0.7) ;
+           }
+ /* ----------------------Andere Hintergrundfarbe und----------------------------------
+     *------------------------------- Textfarbe ------------------------------------------*/
+   header  div a:hover {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+    cursor: pointer;
+    color: brown;
+    background-color: rgba(10, 101, 146, 0.7);
+    box-shadow: 10px 0px 50px rgba(48, 7, 171, 0.7);
+  }
+   /*-------------------------------------------------------------------------
+------------------Style für das Nachschlagefeld----------------------------
+-------------------------------------------------------------------------*/
+header  input {
+    margin: 2px;
+     cursor: pointer;
+     box-shadow: 0px 0px 20px rgba(36, 1, 31, 0.7);
+     font-size: 30px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     text-shadow:0px 0px 20px rgba(74, 5, 64, 0.7) ;
+   }
+
+ 
+/*-----------------------------------------------------------------------------------------------
+------------------------------Breit und Höhe des Bildes im Menü                      -------------*/
+header  img{
+    width: 80px;
+    height: 70px;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------------------Breit und Höhe des Bildes im Körper                     -------------*/
+img{
+    width: 80px;
+    max-height: 150px;
+    }
+  /*-----------------------------------------------------------------------------------------------
+------------------Style für den Hauptcontainer-----------------------------------------------*/
+main{
+    margin: 3px;
+ 
+  padding: 15px;
+}
+/*-----------------------------------------------------------------------------------------------
+--------------------------Style für A Element im Menü---------------------------------------*/
+a{
+  margin: 10px;
+  padding: 10px;
+   cursor: pointer;
+   background-color: rgba(219, 225, 41, 0.7);
+   border-radius: 25px;
+   border-spacing: 10px;
+   box-shadow: 0px 0px 20px rgba(36, 1, 31, 0.7);
+   font-size: 15px;
+   text-decoration: none;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   text-shadow:0px 0px 20px rgba(74, 5, 64, 0.7) ;
+ }
+/*-----------------------------------------------------------------------------------------------
+------------------Style für den Nav-----------------------------------------------*/
+nav{
+    margin: 20px;
+  background-color: rgba(0, 255, 255, 0.532);
+  width: auto;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse Nav-----------------------------------------------*/
+.nav{
+    margin: 20px;
+  background-color: rgba(201, 162, 103, 0.701);
+  width: auto;
+}
+
+  /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Fußzeile
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(255, 250, 240, 0.825);
+    box-shadow: 0px 0px 6px rgb(77, 80, 83);
+    border-radius: 15px;
+    padding: 5px;
+    bottom: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /*-----------------------------------------------------------------------------------------------------
+----------------------/*----------------------------------------------------------------------------------
+------------------------------Breit und Höhe der divs in der Füßzeile-------------*/
+
+footer  div{
+    width: 200px;
+}
+  /*-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------*/
+
+footer p{
+    overflow:auto;
+    max-height: 150px;
+    background-color: bisque;
+  }
+   /*-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+------------------------------Breit und Höhe des Fotos in der Füßzeile-------------*/
+  footer img{
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+  }
+

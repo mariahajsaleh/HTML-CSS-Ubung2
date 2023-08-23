@@ -1,0 +1,191 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Wenn auf dem Bildschirm NICHT genug Platz vorhanden 
+ * ist (in der Regel auf einem Handy, Tablet), dann
+ * können wir die Elemente in kleineren
+ * Räumlichkeiten organisieren. Solche Einstellungen 
+ * kommen dann in diese Datei.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ @media screen and (max-width: 799px) {
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Schriftgröße für den gesamten Inhalt
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+  
+    body {
+      background-color: rgb(214, 238, 207);
+        display: grid;
+        grid-template-columns: 100%;
+      font-size: 150%;
+    }
+  
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Menü-Einträge
+    * * * * *Header soll Zeile1 sein * * * * * * * * * */
+  
+    header  {
+        grid-row-start: 1; 
+    }
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * erste Teile von Header hat ganzeZeile und darin gibs zwei klassen zeile1 und zeile2
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    header .header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+/*---------------zeile1 im header-----------------------------------------------
+-----------------------------------------------------------------*/
+header .header .zeile1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+} 
+/*---------------zeile2 im header-----------------------------------------------
+-----------------------------------------------------------------*/
+  header .header .zeile2{
+    width: 100%;
+   } 
+    /*--------------Nav soll mit flex mitte sein-----------------------------
+  -----------------------------------------------------------------*/
+  
+    nav{  
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+        width: auto;
+        height: auto;
+    }
+    nav div{
+      width: auto;
+      height: auto;
+      margin-bottom: 20px;
+    }
+     /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * klasse Nav soll mit flex mitte sein
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    .nav{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+       background-color: violet;
+       width: auto;
+       height: auto;
+       margin-bottom: 20px;
+      }
+    .nav div{
+      width: auto;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Hauptinhalt mit Grid hat zwei Spalten
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+  
+    main {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      background-color: #caabe8b2;
+    }
+     /*-----------------------------------------------------------------------------------------------
+      ------------------Style für die klasse div1 in Hauptcontainer--------
+       ----------------------------mit flex wrap -wrap-------------------------------------------*/
+   main .div1{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: auto;
+    max-height: 240px;
+      text-align: justify;
+      background-color: rgba(143, 225, 79, 0.837);
+      padding: 5;
+      margin: 5;
+}
+
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div2 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-------------------------------------------*/
+main .div2{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: auto;
+    max-height: 240px;
+    text-align: justify;
+    overflow: auto;
+    background-color: rgba(80, 125, 170, 0.837); 
+    color: rgb(188, 227, 47);
+    padding: 10px;
+    margin:10px;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div3 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-------------------------------------------*/
+main .div3{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: auto;
+    max-height: 240px;
+    text-align: justify;
+    background-color: rgba(158, 62, 71, 0.837);
+    color: rgb(20, 218, 27);
+    padding: 10px;
+    margin: 5px;
+    overflow: auto;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div4 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-------------------------------------------*/
+main .div4{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  overflow: auto;
+  max-height: 240px;
+  background-color: rgba(37, 155, 98, 0.837);
+  color: brown;
+  padding: 10px;
+  margin: 5px;
+  overflow: auto;
+}
+/*-----------------------------------------------------------------------------------------------
+------------------Style für die klasse div5 in Hauptcontainer--------
+----------------------------mit flex wrap -wrap-------------------------------------------*/
+main .div5{
+  
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  overflow: auto;
+  max-height: 240px;
+  background-color: rgba(37, 155, 98, 0.837);
+  color: brown;
+  padding: 10px;
+  margin: 5px;
+}
+  
+  /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Bilder haben Rahmen nur für Mobil
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+   img{
+  border-radius: 20px; 
+  border:5px groove navy;
+  box-shadow: 0 0 20px violet;
+   }
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Fußzeile
+    * * * * * * * * * * * * * * * * * * * * * * * * * * */
+  
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(238, 130, 238, 0.774);
+    }
+  
+
+  }
